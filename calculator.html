@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<style>
+    body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+    }
+
+
+    .calculator {
+        width: 300px;
+        background-color: black;
+        padding: 10px;
+       
+        border-radius: 5px;
+    }
+
+    .display {
+        height: 50px;
+        width: 100%;
+        color: white;
+        background-color: #333;
+        margin-right: 10px;
+        margin-bottom: 20px;
+        text-align: right;
+    }
+
+    .buttons {
+        display: grid;
+        background-color: #3333;
+        padding: 2px;
+        gap: 10px;
+        grid-template-columns:repeat(3, 1fr);
+        border: gray;
+        border-width: 7px;
+        border-radius: 5px;
+        
+    }
+
+    button{
+       padding: 20px;
+  font-size: 18px;
+  border: none;
+  border-radius: 5px;
+  background-color: #444;
+  color: white;
+  cursor: pointer;
+  transition: background 0.2s;
+    }
+
+    button:hover{
+        background-color: darkgreen;
+    }
+
+    button.dot{
+        grid-row: span 2;
+    }
+</style>
+<body>
+<div class="calculator ">
+    <input type="text" id="display" class="display" >
+
+    <div class="buttons ">
+
+    <button data-value="*">X</button>
+    <button data-value="/">/</button>
+    <button data-value="+">+</button>
+    <button data-value="-">-</button>
+
+    
+    <button data-value="1">1</button>
+    <button data-value="2">2</button>
+    <button data-value="3">3</button>
+    
+    <button data-value="4">4</button>
+    <button data-value="5">5</button>
+    <button data-value="6">6</button>
+
+    
+    <button data-value="7">7</button>
+    <button data-value="8">8</button>
+    <button data-value="9">9</button>
+
+    <button data-value="0">0</button>
+    <button id="equals" >=</button>
+    <button data-value="." class="dot">.</button>
+    
+    
+    <button id="clear">C</button>
+
+
+    
+
+    </div>
+
+
+
+
+</div>
+
+    <script src="JS/calcu.js"></script>
+</body>
+</html>
